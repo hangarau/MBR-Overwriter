@@ -19,6 +19,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine,
         ExitProcess();
     } catch(...){}
     CloseHandle(MasterBootRecord);
-    return EXIT_SUCCESS;
+    return EXIT_FAILURE;
 
 }
