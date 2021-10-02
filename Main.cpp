@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <iostream>
 using namespace std;
 #define MBR_SIZE 512
 
